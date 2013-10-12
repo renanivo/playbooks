@@ -1,4 +1,11 @@
 - hosts: workstation
   tasks:
     - name: install vim
-      shell: brew install macvim --override-system-vim
+      homebrew: name=macvim state=present
+
+    - name: get dotVIM
+      git: repo=git@github.com:renanivo/dotvim.git dest=~/.vim
+
+    - name: get my .vimrc
+      get_url: url=https://gist.github.com/renanivo/415001/raw/ff48fdbf689ef404b90ef57b01d9327c4f81a6d0/.vimrc
+               dest=~/.vimrc
