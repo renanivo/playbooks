@@ -1,0 +1,4 @@
+- hosts: workstation
+  tasks:
+    - name: install vim
+      shell: brew install macvim --override-system-vim
