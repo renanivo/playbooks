@@ -7,3 +7,6 @@
 
 - name: make delete-merged executable
   file: path=~/bin/delete-merged mode=0540
+
+- name: install GNU sed
+  homebrew: name=gnu-sed state=present
