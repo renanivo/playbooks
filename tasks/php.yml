@@ -1,0 +1,13 @@
+- name: install php 5.4
+  homebrew: name=php54 state=present
+
+- name: get composer
+  shell: cd ~/bin; curl -sS https://getcomposer.org/installer | php creates=~/bin/composer.phar
+
+- name: remove .phar from composer
+  command: mv ~/bin/composer.phar creates=~/bin/composer removes=~/bin/composer.phar
+
+- name: get php-tools
+  git: repo=git@github.com:EHER/php-tools.git dest=~/.php-tools
+  notify:
+    - install php-tools

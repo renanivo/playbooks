@@ -2,5 +2,7 @@
   tasks:
     - include: tasks/vim.yml
     - include: tasks/tools.yml
+    - include: tasks/php.yml
   handlers:
-    - include: handlers/dotvim.yml
+    - include: handlers/make.yml
+    - include: handlers/composer.yml
