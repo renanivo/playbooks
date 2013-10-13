@@ -1,2 +1,2 @@
 - name: compose php-tools
-  shell: cd ~/.php-tools; composer install
+  command: composer install chdir=~/.php-tools

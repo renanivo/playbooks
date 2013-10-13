@@ -1,2 +1,2 @@
 - name: make dotVIM
-  shell: make -C ~/.vim install instant-markdown
+  command: make install instant-markdown chdir=~/.vim
