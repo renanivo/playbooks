@@ -1,5 +1,6 @@
 - hosts: workstation
   tasks:
     - include: tasks/vim.yml
+    - include: tasks/tools.yml
   handlers:
     - include: handlers/dotvim.yml

@@ -1,0 +1,9 @@
+- name: create home bin folder
+  command: mkdir ~/bin creates=~/bin
+
+- name: get delete-merged
+  get_url: url=https://gist.github.com/renanivo/4990090/raw/7b3d5ab9e396a0ab7b23f288da79eb41798c67ef/delete-merged.sh
+           dest=~/bin/delete-merged
+
+- name: make delete-merged executable
+  file: path=~/bin/delete-merged mode=0540
