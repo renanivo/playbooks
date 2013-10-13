@@ -11,3 +11,7 @@
   git: repo=git@github.com:EHER/php-tools.git dest=~/.php-tools
   notify:
     - compose php-tools
+
+- name: set PHPCS Conding standard to PSR-2
+  command: phpcs --config-set default_standard PSR-2
+  sudo: yes
