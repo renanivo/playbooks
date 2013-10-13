@@ -10,4 +10,4 @@
 - name: get php-tools
   git: repo=git@github.com:EHER/php-tools.git dest=~/.php-tools
   notify:
-    - install php-tools
+    - compose php-tools

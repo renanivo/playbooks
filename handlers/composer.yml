@@ -1,2 +1,2 @@
-- name: install php-tools
+- name: compose php-tools
   shell: cd ~/.php-tools; composer install
