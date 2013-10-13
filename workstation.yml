@@ -3,6 +3,7 @@
     - include: tasks/vim.yml
     - include: tasks/tools.yml
     - include: tasks/php.yml
+    - include: tasks/python.yml
   handlers:
     - include: handlers/make.yml
     - include: handlers/composer.yml

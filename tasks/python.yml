@@ -1,0 +1,2 @@
+- name: install pip
+  easy_install: name=pip
