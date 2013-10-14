@@ -5,13 +5,10 @@
   shell: cd ~/bin; curl -sS https://getcomposer.org/installer | php creates=~/bin/composer
 
 - name: remove .phar from composer
-  command: mv ~/bin/composer.phar creates=~/bin/composer removes=~/bin/composer.phar
+  shell: mv ~/bin/composer.phar ~/bin/composer creates=~/bin/composer
 
 - name: get php-tools
   git: repo=git@github.com:EHER/php-tools.git dest=~/.php-tools
   notify:
     - compose php-tools
-
-- name: set PHPCS Conding standard to PSR-2
-  command: phpcs --config-set default_standard PSR-2
-  sudo: yes
+    - execute PHPCS set PSR-2
