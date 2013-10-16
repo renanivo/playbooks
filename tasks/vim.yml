@@ -5,6 +5,9 @@
   git: repo=git@github.com:renanivo/dotvim.git dest=~/.vim
   notify:
     - make dotVIM
+    - install instant-markdown-d node package
+    - install redcarpet gem
+    - install pygments.rb gem
 
 - name: get my .vimrc
   get_url: url=https://gist.github.com/renanivo/415001/raw/ff48fdbf689ef404b90ef57b01d9327c4f81a6d0/.vimrc

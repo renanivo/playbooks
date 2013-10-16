@@ -1,0 +1,7 @@
+- name: install redcarpet gem
+  gem: name=redcarpet state=present
+  sudo: yes
+
+- name: install pygments.rb gem
+  gem: name=pygments.rb state=present
+  sudo: yes

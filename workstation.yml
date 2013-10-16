@@ -8,3 +8,5 @@
     - include: handlers/make.yml
     - include: handlers/composer.yml
     - include: handlers/shell.yml
+    - include: handlers/npm.yml
+    - include: handlers/gem.yml
