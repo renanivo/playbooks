@@ -16,3 +16,24 @@
 
 - name: install ruby-build
   homebrew: name=ruby-build state=present
+
+- name: get composer
+  shell: cd ~/bin; curl -sS https://getcomposer.org/installer | php creates=~/bin/composer
+
+- name: remove .phar from composer
+  shell: mv ~/bin/composer.phar ~/bin/composer creates=~/bin/composer
+
+- name: get twig-lint
+  command: wget http://asm89.github.com/d/twig-lint.phar chdir=~/bin creates=~/bin/twig-lint
+
+- name: remove .phar from twig-lint
+  shell: mv ~/bin/twig-lint.phar ~/bin/twig-lint creates=~/bin/twig-lint
+
+- name: make twig-lint executable
+  file: path=~/bin/twig-lint mode=0540
+
+- name: get php-tools
+  git: repo=git@github.com:EHER/php-tools.git dest=~/.php-tools
+  notify:
+    - compose php-tools
+    - execute PHPCS set PSR-2
