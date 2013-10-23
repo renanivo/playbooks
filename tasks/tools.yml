@@ -10,3 +10,9 @@
 
 - name: install GNU sed
   homebrew: name=gnu-sed state=present
+
+- name: install rbenv
+  homebrew: name=rbenv state=present
+
+- name: install ruby-build
+  homebrew: name=ruby-build state=present
