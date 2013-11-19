@@ -1,2 +1,6 @@
 - name: compose php-tools
   command: composer install chdir=~/.php-tools
+
+- name: set PHPCS standard to PSR-2
+  command: ./bin/phpcs --config-set default_standard PSR-2 chdir=/Users/{{ ansible_user_id }}
+  sudo: yes
