@@ -1,2 +1,0 @@
-- name: make dotVIM
-  command: make install chdir=~/.vim

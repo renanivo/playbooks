@@ -1,0 +1,5 @@
+- name: ensure rbenv is installed
+  homebrew: name=rbenv state=present
+
+- name: ensure ruby-build plugin of rbenv is installed
+  homebrew: name=ruby-build state=present

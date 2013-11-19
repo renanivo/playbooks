@@ -1,12 +1,7 @@
 - hosts: workstation
-  tasks:
-    - include: tasks/php.yml
-    - include: tasks/python.yml
-    - include: tasks/tools.yml
-    - include: tasks/vim.yml
-  handlers:
-    - include: handlers/make.yml
-    - include: handlers/composer.yml
-    - include: handlers/shell.yml
-    - include: handlers/npm.yml
-    - include: handlers/gem.yml
+  roles:
+    - dev-tools
+    - php-dev
+    - ruby-dev
+    - python-dev
+    - macvim

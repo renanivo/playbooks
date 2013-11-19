@@ -1,0 +1,11 @@
+- name: ensure global composer is installed
+  shell: cd ~/bin; curl -sS https://getcomposer.org/installer | php creates=~/bin/composer
+
+- name: ensure composer has no .phar extension
+  shell: mv ~/bin/composer.phar ~/bin/composer creates=~/bin/composer
+
+- name: ensure php-tools is installed
+  git: repo=git@github.com:EHER/php-tools.git dest=~/.php-tools
+  notify:
+    - compose php-tools
+    - set PHPCS standard to PSR-2

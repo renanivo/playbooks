@@ -1,3 +1,3 @@
-- name: execute PHPCS set PSR-2
+- name: set PHPCS standard to PSR-2
   command: ./bin/phpcs --config-set default_standard PSR-2 chdir=/Users/{{ ansible_user_id }}
   sudo: yes

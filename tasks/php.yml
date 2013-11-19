@@ -1,2 +1,0 @@
-- name: install php 5.4
-  homebrew: name=php54 state=present

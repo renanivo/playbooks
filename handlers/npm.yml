@@ -1,2 +1,0 @@
-- name: install instant-markdown-d node package
-  npm: name=instant-markdown-d state=present global=yes
