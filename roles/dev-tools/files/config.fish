@@ -54,4 +54,4 @@ function fish_prompt --description 'Write out the prompt'
     set_color normal
 end
 
-set -xU PATH ~/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/sbin:/opt/X11/bin
+set PATH ~/bin /usr/local/bin /usr/bin /bin /usr/sbin /sbin /usr/local/sbin /opt/X11/bin
