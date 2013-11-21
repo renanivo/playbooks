@@ -5,10 +5,3 @@
   command: ./bin/phpcs --config-set default_standard PSR-2 chdir=/Users/{{ ansible_user_id }}
   sudo: yes
 
-- name: add fish to shells
-  shell: grep fish /etc/shells || echo "/usr/local/bin/fish" >> /etc/shells
-  sudo: yes
-
-- name: set fish as default shell
-  shell: chsh -s /usr/local/bin/fish {{ ansible_user_id }}
-  sudo: yes

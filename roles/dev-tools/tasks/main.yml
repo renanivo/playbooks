@@ -17,5 +17,8 @@
     - add fish to shells
     - set fish as default shell
 
+- name: create fish configuration directory
+  file: path=~/.config/fish state=directory
+
 - name: ensure fish configuration is updated
-  file: src=files/config.fish dest=~/.config/fish/config.fish
+  copy: src=config.fish dest=~/.config/fish/config.fish
