@@ -10,15 +10,3 @@
 
 - name: ensure GNU sed is installed
   homebrew: name=gnu-sed state=present
-
-- name: ensure fish shell is installed
-  homebrew: name=fish state=present
-  notify:
-    - add fish to shells
-    - set fish as default shell
-
-- name: create fish configuration directory
-  file: path=~/.config/fish state=directory
-
-- name: ensure fish configuration is updated
-  copy: src=config.fish dest=~/.config/fish/config.fish

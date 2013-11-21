@@ -1,0 +1,23 @@
+- name: ensure fish shell is installed
+  homebrew: name=fish state=present
+  notify:
+    - add fish to shells
+    - set fish as default shell
+
+- name: create fish configuration directory
+  file: path=~/.config/fish state=directory
+
+- name: ensure fish configuration is updated
+  copy: src=config.fish dest=~/.config/fish/config.fish
+
+- name: retrieve current shells
+  command: cat /etc/shells
+  register: shells
+  changed_when: false
+
+- name: add fish to shells
+  shell: echo "/usr/local/bin/fish" >> /etc/shells
+  sudo: yes
+  when: "'fish' not in shells.stdout"
+  notify:
+      - set fish as default shell
