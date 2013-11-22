@@ -10,3 +10,6 @@
 
 - name: ensure GNU sed is installed
   homebrew: name=gnu-sed state=present
+
+- name: ensure fswatch is installed
+  homebrew: name=fswatch state=present
