@@ -1,0 +1,3 @@
+brew_packages:
+    - gnu-sed
+    - fswatch
