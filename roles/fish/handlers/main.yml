@@ -1,3 +1,0 @@
-- name: set fish as default shell
-  shell: chsh -s /usr/local/bin/fish {{ ansible_user_id }}
-  sudo: yes

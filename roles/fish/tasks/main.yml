@@ -1,13 +1,13 @@
-- name: ensure fish shell is installed
+- name: be sure fish shell is installed
   homebrew: name=fish state=present
   notify:
     - add fish to shells
     - set fish as default shell
 
-- name: create fish configuration directory
+- name: be sure fish configuration directory exists
   file: path=~/.config/fish state=directory
 
-- name: ensure fish configuration is updated
+- name: be sure fish configuration is updated
   copy: src=config.fish dest=~/.config/fish/config.fish
 
 - name: retrieve current shells
@@ -15,9 +15,13 @@
   register: shells
   changed_when: false
 
-- name: add fish to shells
+- name: be sure fish is in /etc/shells
   shell: echo "/usr/local/bin/fish" >> /etc/shells
   sudo: yes
   when: "'fish' not in shells.stdout"
-  notify:
-      - set fish as default shell
+
+- name: be sure fish is the default shell
+  shell: chsh -s /usr/local/bin/fish {{ ansible_user_id }}
+  sudo: yes
+  register: output
+  changed_when: "'no changes made' not in output.stderr"
