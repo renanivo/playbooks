@@ -55,3 +55,4 @@ function fish_prompt --description 'Write out the prompt'
 end
 
 set PATH ~/bin /usr/local/bin /usr/bin /bin /usr/sbin /sbin /usr/local/sbin /opt/X11/bin
+set -xg JAVA_HOME (/usr/libexec/java_home)
