@@ -1,0 +1,10 @@
+- name: verify homebrew presence
+  command: which brew
+  register: brew_present
+  changed_when: false
+  ignore_errors: true
+
+- name: install homebrew
+  command: ruby -e "$(curl -fsSL https://raw.github.com/mxcl/homebrew/go/install)"
+  when: brew_present|failed
+
