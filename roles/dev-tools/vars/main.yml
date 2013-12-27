@@ -1,3 +1,4 @@
 brew_packages:
     - gnu-sed
     - fswatch
+    - rest-shell
