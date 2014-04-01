@@ -1,0 +1,17 @@
+[user]
+	name = {{ git_name }}
+	email = {{ git_email }}
+[core]
+	editor = vim
+	excludesfile = {{ ansible_env.HOME }}/.gitignore
+[color]
+	ui = true
+[github]
+	user = {{ github_username }}
+	token = {{ github_token }}
+[merge]
+	tool = vimdiff
+[push]
+	default = simple
+[pull]
+	rebase = true

@@ -1,6 +1,7 @@
 - hosts: workstation
   roles:
     - osx-common
+    - git
     - dev-tools
     - php-dev
     - ruby-dev

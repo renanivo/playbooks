@@ -1,0 +1,2 @@
+- name: be sure git is configured
+  template: src=gitconfig.j2 dest=~/.gitconfig owner={{ ansible_user_id }}
