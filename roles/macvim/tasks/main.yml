@@ -1,5 +1,5 @@
 - name: be sure MacVim is installed
-  homebrew: name=macvim state=present
+  homebrew: name=macvim state=present options=with-lua,override-system-vim
 
 - name: be sure vim configurations are updated
   git: repo=git@github.com:renanivo/dotvim.git dest=~/.vim
@@ -10,5 +10,5 @@
     - install pygments.rb gem
 
 - name: be sure .vimrc is updated
-  get_url: url=https://gist.github.com/renanivo/415001/raw/ff48fdbf689ef404b90ef57b01d9327c4f81a6d0/.vimrc
+  get_url: url=https://gist.githubusercontent.com/renanivo/415001/raw/733265fbaf02bcabf8eb97956ad6afcf51dc90f8/.vimrc
            dest=~/.vimrc
