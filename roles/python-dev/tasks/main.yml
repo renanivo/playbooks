@@ -1,6 +1,7 @@
 - name: be sure pip is installed
   easy_install: name=pip
 
-- name: be sure virutalenv is installed
-  pip: name=virtualenv state=present
+- name: be sure global pip packages are installed
+  pip: name={{ item }} state=present
   sudo: yes
+  with_items: global_pip_packages
