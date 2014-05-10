@@ -1,0 +1,5 @@
+- name: update homebrew
+  shell: brew update
+
+- name: update homebrew cask
+  shell: brew upgrade brew-cask

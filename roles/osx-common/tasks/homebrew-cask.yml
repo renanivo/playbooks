@@ -3,3 +3,5 @@
 
 - name: be sure homebrew cask is installed
   homebrew: name=brew-cask state=present
+  notify:
+      - update homebrew cask
