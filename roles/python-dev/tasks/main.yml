@@ -1,3 +1,6 @@
 - name: be sure pip is installed
   easy_install: name=pip
 
+- name: be sure virutalenv is installed
+  pip: name=virtualenv state=present
+  sudo: yes
