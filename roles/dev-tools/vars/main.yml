@@ -2,3 +2,9 @@ brew_packages:
     - gnu-sed
     - fswatch
     - wget
+
+brew_cask_packages:
+    - iterm2
+
+browsers:
+    - google-chrome

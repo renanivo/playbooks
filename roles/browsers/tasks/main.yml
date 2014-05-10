@@ -1,2 +1,0 @@
-- name: be sure Google Chrome is installed
-  homebrew_cask: name=google-chrome state=present
