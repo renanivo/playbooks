@@ -2,9 +2,13 @@ brew_packages:
     - gnu-sed
     - fswatch
     - wget
+    - ack
+    - nmap
 
 brew_cask_packages:
     - iterm2
+    - xquartz
 
 browsers:
     - google-chrome
+    - firefox
