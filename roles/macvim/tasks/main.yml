@@ -1,6 +1,9 @@
 - name: be sure MacVim is installed
   homebrew: name=macvim state=present options=with-lua,override-system-vim
 
+- name: be sure exuberant-ctags is installed
+  homebrew: name=ctags state=present
+
 - name: be sure vim configurations are updated
   git: repo=git@github.com:renanivo/dotvim.git dest=~/.vim
   notify:
