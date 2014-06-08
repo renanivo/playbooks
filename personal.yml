@@ -1,2 +1,4 @@
+hosts: workstation
+tasks:
 - name: be sure dashlane app is installed
   homebrew_cask: name=dashlane state=present
