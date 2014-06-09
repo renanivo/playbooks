@@ -1,3 +1,4 @@
 global_pip_packages:
     - virtualenv
+    - setuptools
     - flake8
