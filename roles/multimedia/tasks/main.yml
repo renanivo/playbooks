@@ -1,0 +1,5 @@
+- name: be sure picasa is installed
+  homebrew_cask: name=picasa state=present
+
+- name: be sure aegisub is installed
+  homebrew_cask: name=aegisub state=present
