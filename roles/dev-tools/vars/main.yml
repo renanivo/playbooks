@@ -9,6 +9,9 @@ brew_cask_packages:
     - iterm2
     - xquartz
 
+pip_packages:
+    - httpie
+
 browsers:
     - google-chrome
     - firefox

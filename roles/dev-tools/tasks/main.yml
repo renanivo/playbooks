@@ -8,9 +8,14 @@
 - name: be sure delete-merged script is executable
   file: path=~/bin/delete-merged mode=0540
 
-- name: be sure homebrew packages of all tools are installed
-  homebrew: name={{ item }} state=present
+- name: be sure homebrew packages of tools are installed
+  homebrew: name={{ item }} state=latest
   with_items: brew_packages
+
+- name: be sure pip packages of tools are installed
+  sudo: yes
+  pip: name={{ item }} state=latest
+  with_items: pip_packages
 
 - name: be sure homebrew cask packages of all tools are installed
   homebrew_cask: name={{ item }} state=present
