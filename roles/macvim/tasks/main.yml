@@ -13,5 +13,5 @@
     - install pygments.rb gem
 
 - name: be sure .vimrc is updated
-  get_url: url=https://gist.githubusercontent.com/renanivo/415001/raw/733265fbaf02bcabf8eb97956ad6afcf51dc90f8/.vimrc
+  get_url: url=https://gist.githubusercontent.com/renanivo/415001/raw/f50451264245c9a33968690d548de490ef236fc9/.vimrc
            dest=~/.vimrc
