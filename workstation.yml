@@ -7,5 +7,6 @@
     - ruby-dev
     - python-dev
     - java-dev
+    - node-dev
     - macvim
     - fish

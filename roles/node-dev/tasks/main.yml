@@ -1,0 +1,5 @@
+- name: be sure npm is installed
+  homebrew: name=node state=latest
+
+- name: be sure node is installed
+  homebrew: name=npm state=latest
