@@ -1,2 +1,5 @@
 - name: be sure git is configured
-  template: src=gitconfig.j2 dest=~/.gitconfig owner={{ ansible_user_id }}
+  template: src=gitconfig.j2 dest={{ ansible_env.HOME }}/.gitconfig owner={{ ansible_user_id }}
+
+- name: be sure global git ignore file is placed
+  copy: src=global_gitignore dest={{ ansible_env.HOME }}/.gitignore owner={{ ansible_user_id }}
