@@ -5,6 +5,7 @@ brew_packages:
     - ack
     - nmap
     - git-extras
+    - tree
 
 brew_cask_packages:
     - iterm2
