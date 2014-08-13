@@ -22,6 +22,12 @@ set -g __fish_git_prompt_color_cleanstate green bold
 function fish_prompt --description 'Write out the prompt'
     set -l last_status $status
 
+    if test $VIRTUAL_ENV
+        set_color cyan
+        printf "(%s) " (basename $VIRTUAL_ENV)
+        set_color normal
+    end
+
     set_color yellow
     printf '%s' (whoami)
     set_color normal
@@ -40,10 +46,6 @@ function fish_prompt --description 'Write out the prompt'
 
     # Line 2
     echo
-    if test $VIRTUAL_ENV
-        printf "(%s) " (set_color blue)(basename $VIRTUAL_ENV)(set_color normal)
-    end
-    set_color normal
 
     if not test $last_status -eq 0
         set_color $fish_color_error
