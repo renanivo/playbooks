@@ -61,3 +61,4 @@ set -xg JAVA_HOME (/usr/libexec/java_home)
 set -xg PYTHONPATH "/usr/local/ansible/lib:/usr/local/ansible"
 set -xg ANSIBLE_LIBRARY "/usr/local/ansible/library"
 set -xg MANPATH "/usr/local/ansible/docs/man"
+set -xg VIRTUAL_ENV_DISABLE_PROMPT 0
