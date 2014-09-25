@@ -1,0 +1,3 @@
+- name: install npm global tools
+  npm: name={{ item }} state=latest global=yes
+  with_items: mpm_global_tools
