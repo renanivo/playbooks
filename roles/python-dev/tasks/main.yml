@@ -6,3 +6,9 @@
   pip: name={{ item }} state=latest
   sudo: yes
   with_items: global_pip_packages
+
+- name: create pip config folder
+  file: path={{ ansible_env.HOME }}/.pip state=directory owner={{ ansible_user_id }}
+
+- name: add my pip config
+  copy: src=pip.conf dest={{ ansible_env.HOME }}/.pip/pip.conf owner={{ ansible_user_id }}
