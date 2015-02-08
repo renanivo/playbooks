@@ -11,7 +11,3 @@
     - install instant-markdown-d node package
     - install redcarpet gem
     - install pygments.rb gem
-
-- name: be sure .vimrc is updated
-  get_url: url=https://gist.githubusercontent.com/renanivo/415001/raw/f50451264245c9a33968690d548de490ef236fc9/.vimrc
-           dest=~/.vimrc
