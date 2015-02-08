@@ -1,5 +1,4 @@
-os:
-    - osx
+os: osx
 
 script: ansible-playbook workstation.yml
 
