@@ -3,6 +3,6 @@ os:
 
 script: ansible-playbook workstation.yml
 
-before-script:
+before_script:
     - git clone git://github.com/ansible/ansible.git /usr/local/ansible
     - source /usr/local/ansible/hacking/env-setup
