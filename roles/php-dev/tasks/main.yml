@@ -1,5 +1,5 @@
 - name: install global composer
-  shell: curl -sS https://getcomposer.org/installer | php -- --install-dir=/Users/{{ ansible_user_id }}/bin --filename=composer creates=~/bin/composer
+  shell: curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer creates=/usr/local/bin/composer
 
 - name: be sure php-tools is installed
   git: repo=git@github.com:EHER/php-tools.git dest=~/.php-tools
