@@ -1,6 +1,8 @@
 Playbooks
 =========
 
+[![Build Status](https://travis-ci.org/renanivo/playbooks.svg)](https://travis-ci.org/renanivo/playbooks)
+
 The ansible playbooks that I use.
 
 Install the Last Version of Ansible
