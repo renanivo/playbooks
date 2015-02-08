@@ -4,5 +4,4 @@ os:
 script: ansible-playbook workstation.yml
 
 before_script:
-    - git clone git://github.com/ansible/ansible.git /usr/local/ansible
-    - source /usr/local/ansible/hacking/env-setup
+    - sudo pip install ansible
