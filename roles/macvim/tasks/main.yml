@@ -5,7 +5,7 @@
   homebrew: name=ctags state=present
 
 - name: be sure vim configurations are updated
-  git: repo=git@github.com:renanivo/dotvim.git dest=~/.vim accept_hostkey=yes
+  git: repo=https://github.com/renanivo/dotvim.git dest=~/.vim accept_hostkey=yes
   notify:
     - make dotVIM
     - install instant-markdown-d node package
