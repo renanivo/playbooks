@@ -1,8 +1,10 @@
 - name: install global composer
   shell: curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer creates=/usr/local/bin/composer
 
-- name: be sure php-tools is installed
-  git: repo=git@github.com:EHER/php-tools.git dest=~/.php-tools
+- name: install global composer packages
+  command: composer global require {{ item }} creates=/Users/{{ ansible_user_id }}/.composer/bin/
+  with_items: global_composer_packages
+  register: composer_global
+  changed_when: "'Nothing to install or update' not in composer_global.stdout"
   notify:
-    - compose php-tools
     - set PHPCS standard to PSR-2
