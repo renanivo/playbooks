@@ -1,10 +1,9 @@
-- name: be sure pip is installed
-  easy_install: name=pip
-  sudo: yes
+- name: be sure python2 is installed
+  homebrew: name=python state=latest
+  with_items: brew_packages
 
 - name: be sure global pip packages are installed
   pip: name={{ item }} state=latest
-  sudo: yes
   with_items: global_pip_packages
 
 - name: create pip config folder
