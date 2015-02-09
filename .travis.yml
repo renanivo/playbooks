@@ -5,3 +5,4 @@ script: ansible-playbook workstation.yml -e git_name="" -e git_email="" -e githu
 
 before_script:
     - sudo pip install ansible
+    - rm -rf ~/.vim
