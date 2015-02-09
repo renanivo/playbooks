@@ -2,11 +2,31 @@
   roles:
     - osx-common
     - git
-    - dev-tools
     - php-dev
     - ruby-dev
     - python-dev
     - java-dev
     - node-dev
+    - dev-tools
     - macvim
     - fish
+
+  vars_prompt:
+    - name: "git_name"
+      prompt: "Which name you want in your commits?"
+      default: "Renan Ivo"
+      private: no
+
+    - name: "git_email"
+      prompt: "Which email you want in your commits?"
+      default: "renanivom@gmail.com"
+      private: no
+
+    - name: "github_username"
+      prompt: "What's your github username?"
+      default: "renanivo"
+      private: no
+
+    - name: "github_token"
+      prompt: "Insert a github token"
+      private: no

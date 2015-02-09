@@ -8,7 +8,9 @@
 	ui = true
 [github]
 	user = {{ github_username }}
+{% if github_token %}
 	token = {{ github_token }}
+{% endif %}
 [merge]
 	tool = vimdiff
 [push]
