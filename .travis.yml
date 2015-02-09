@@ -1,7 +1,7 @@
 os:
     - osx
 
-script: ansible-playbook workstation.yml --ask-sudo-pass -e git_name="" -e git_email="" -e github_username="" -e github_token=""
+script: ansible-playbook workstation.yml -e git_name="" -e git_email="" -e github_username="" -e github_token=""
 
 before_script:
     - sudo pip install ansible
