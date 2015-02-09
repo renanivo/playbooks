@@ -56,7 +56,7 @@ function fish_prompt --description 'Write out the prompt'
     set_color normal
 end
 
-set PATH ~/bin /usr/local/ansible/bin /usr/local/bin /usr/bin /bin /usr/sbin /sbin /usr/local/sbin /opt/X11/bin
+set PATH ~/bin ~/.composer/vendor/bin /usr/local/ansible/bin /usr/local/bin /usr/bin /bin /usr/sbin /sbin /usr/local/sbin /opt/X11/bin
 set -xg JAVA_HOME (/usr/libexec/java_home)
 set -xg PYTHONPATH "/usr/local/ansible/lib:/usr/local/ansible"
 set -xg ANSIBLE_LIBRARY "/usr/local/ansible/library"
