@@ -7,5 +7,3 @@
 - name: be sure homebrew cask is installed
   shell: brew install caskroom/cask/brew-cask
   when: brew_cask_present|failed
-  notify:
-      - update homebrew cask
