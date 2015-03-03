@@ -1,0 +1,11 @@
+- name: clone awesome terminal fonts
+  git: repo=https://github.com/gabrielelana/awesome-terminal-fonts.git
+    dest=/tmp/awesome-terminal-fonts
+    version=patching-strategy
+
+- name: ensure fonts directory exists
+  file: path=/Users/{{ ansible_user_id }}/Library/Fonts state=directory
+
+- name: copy awesome fonts to user fonts directory
+  copy: src=/tmp/awesome-terminal-fonts/patched/
+   dest=/Users/{{ ansible_user_id }}/Library/Fonts

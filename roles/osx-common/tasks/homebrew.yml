@@ -7,5 +7,7 @@
 - name: install homebrew
   shell: ruby -e "$(curl -fsSL https://raw.github.com/mxcl/homebrew/go/install)"
   when: brew_present|failed
-  notify:
-      - update homebrew
+
+- name: update homebrew and its packages
+  homebrew: update_homebrew=yes upgrade_all=yes
+  when: brew_present

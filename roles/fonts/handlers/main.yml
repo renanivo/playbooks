@@ -1,0 +1,2 @@
+- name: reload fonts cache
+  command: fc-cache --verbose /Users/{{ ansible_user_id }}/fonts
