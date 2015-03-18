@@ -56,11 +56,9 @@ function fish_prompt --description 'Write out the prompt'
     set_color normal
 end
 
-set PATH ~/bin ~/.composer/vendor/bin /usr/local/ansible/bin /usr/local/bin /usr/bin /bin /usr/sbin /sbin /usr/local/sbin /opt/X11/bin
+set PATH ~/bin ~/.composer/vendor/bin /usr/local/bin /usr/bin /bin /usr/sbin /sbin /usr/local/sbin /opt/X11/bin
 set -xg JAVA_HOME (/usr/libexec/java_home)
 set -xg PYTHONPATH "/usr/local/ansible/lib:/usr/local/ansible"
-set -xg ANSIBLE_LIBRARY "/usr/local/ansible/library"
-set -xg MANPATH "/usr/local/ansible/docs/man"
 set -xg VIRTUAL_ENV_DISABLE_PROMPT 0
 set -xg LC_ALL en_US.UTF-8
 set -xg LANG en_US.UTF-8

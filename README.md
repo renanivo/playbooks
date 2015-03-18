@@ -5,12 +5,11 @@ Playbooks
 
 The ansible playbooks that I use.
 
-Install the Last Version of Ansible
------------------------------------
+Install Ansible
+---------------
 
 ```bash
-git clone git://github.com/ansible/ansible.git /usr/local/ansible
-sh -c 'source /usr/local/ansible/hacking/env-setup'
+pip install ansible
 ```
 
 Run
