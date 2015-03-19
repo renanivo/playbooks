@@ -6,6 +6,7 @@ brew_packages:
     - nmap
     - git-extras
     - tree
+    - boot2docker
 
 brew_cask_packages:
     - iterm2
