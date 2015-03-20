@@ -5,8 +5,9 @@ branches:
     only:
         - master
 
-script: ansible-playbook workstation.yml -e git_name="" -e git_email="" -e github_username="" -e github_token="" -vvvv
+script: ansible-playbook workstation.yml -vvvv
 
 before_script:
     - sudo pip install ansible
     - rm -rf ~/.vim
+    - cp group_vars/workstation.example group_vars/workstation
