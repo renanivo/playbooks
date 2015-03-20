@@ -1,10 +1,8 @@
 brew_packages:
     - gnu-sed
-    - fswatch
     - wget
     - ack
     - nmap
-    - git-extras
     - tree
     - boot2docker
 
