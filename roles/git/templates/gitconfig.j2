@@ -1,11 +1,10 @@
-[user]
-	name = {{ git_name }}
-	email = {{ git_email }}
+[color]
+	ui = true
 [core]
 	editor = vim
 	excludesfile = {{ ansible_env.HOME }}/.gitignore
-[color]
-	ui = true
+[credential]
+	helper = osxkeychain
 [github]
 	user = {{ github_username }}
 {% if github_token %}
@@ -17,3 +16,6 @@
 	default = simple
 [pull]
 	rebase = true
+[user]
+	name = {{ git_name }}
+	email = {{ git_email }}
