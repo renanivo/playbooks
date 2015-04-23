@@ -4,10 +4,22 @@
 - name: be sure exuberant-ctags is installed
   homebrew: name=ctags state=present
 
+- name: install instant-markdown-d node package
+  npm: name=instant-markdown-d state=present global=yes
+
+- name: install redcarpet gem
+  gem: name=redcarpet state=present
+  sudo: yes
+
+- name: install pygments.rb gem
+  gem: name=pygments.rb state=present
+  sudo: yes
+
+- name: install InstantRst pip package
+  pip: name=https://github.com/Rykka/instant-rst.py/archive/master.zip
+       state=latest
+
 - name: be sure vim configurations are updated
   git: repo=https://github.com/renanivo/dotvim.git dest=~/.vim accept_hostkey=yes
   notify:
     - make dotVIM
-    - install instant-markdown-d node package
-    - install redcarpet gem
-    - install pygments.rb gem

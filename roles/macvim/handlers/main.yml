@@ -1,13 +1,2 @@
 - name: make dotVIM
   command: make install chdir=~/.vim
-
-- name: install instant-markdown-d node package
-  npm: name=instant-markdown-d state=present global=yes
-
-- name: install redcarpet gem
-  gem: name=redcarpet state=present
-  sudo: yes
-
-- name: install pygments.rb gem
-  gem: name=pygments.rb state=present
-  sudo: yes
