@@ -1,10 +1,11 @@
 brew_packages:
-    - gnu-sed
-    - wget
     - ack
+    - boot2docker
+    - gnu-sed
+    - hub
     - nmap
     - tree
-    - boot2docker
+    - wget
 
 brew_cask_packages:
     - iterm2
