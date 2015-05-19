@@ -16,6 +16,9 @@ brew_cask_packages:
 pip_packages:
     - httpie
 
+gem_packages:
+    - travis
+
 browsers:
     - google-chrome
     - firefox
