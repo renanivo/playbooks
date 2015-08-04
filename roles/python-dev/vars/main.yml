@@ -2,3 +2,4 @@ global_pip_packages:
     - flake8
     - pip-tools
     - ipython
+    - ptpython
