@@ -1,18 +1,18 @@
 - name: be sure MacVim is installed
-  homebrew: name=macvim state=present options=with-lua,override-system-vim
+  homebrew: name=macvim state=latest options=with-lua,override-system-vim
 
 - name: be sure exuberant-ctags is installed
-  homebrew: name=ctags state=present
+  homebrew: name=ctags state=latest
 
 - name: install instant-markdown-d node package
-  npm: name=instant-markdown-d state=present global=yes
+  npm: name=instant-markdown-d state=latest global=yes
 
 - name: install redcarpet gem
-  gem: name=redcarpet state=present
+  gem: name=redcarpet state=latest
   sudo: yes
 
 - name: install pygments.rb gem
-  gem: name=pygments.rb state=present
+  gem: name=pygments.rb state=latest
   sudo: yes
 
 - name: install InstantRst pip package

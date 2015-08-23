@@ -1,5 +1,5 @@
 - name: be sure Maven is installed
-  homebrew: name=maven state=present
+  homebrew: name=maven state=latest
 
 - name: be sure Gradle is installed
-  homebrew: name=gradle state=present
+  homebrew: name=gradle state=latest

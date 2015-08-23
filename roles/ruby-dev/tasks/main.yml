@@ -1,3 +1,3 @@
 - name: be sure rbenv and its plugins are installed
-  homebrew: name={{ item }} state=present
+  homebrew: name={{ item }} state=latest
   with_items: rbenv_and_plugins

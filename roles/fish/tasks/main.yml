@@ -1,5 +1,5 @@
 - name: be sure fish shell is installed
-  homebrew: name=fish state=present
+  homebrew: name=fish state=latest
 
 - name: be sure fish configuration directory exists
   file: path=~/.config/fish state=directory
