@@ -7,6 +7,12 @@
 - name: be sure fish configuration is updated
   copy: src=config.fish dest=~/.config/fish/config.fish
 
+- name: be sure virtualfish is installed
+  pip: name=virtualfish state=latest
+
+- name: be sure virtualfish folder exists
+  file: path=/Users/{{ ansible_user_id }}/.virtualenvs state=directory
+
 - name: retrieve current shells
   command: cat /etc/shells
   register: shells

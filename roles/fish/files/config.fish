@@ -19,14 +19,10 @@ set -g __fish_git_prompt_color_invalidstate red
 set -g __fish_git_prompt_color_untrackedfiles $fish_color_normal
 set -g __fish_git_prompt_color_cleanstate green --bold
 
+eval (python -m virtualfish)
+
 function fish_prompt --description 'Write out the prompt'
     set -l last_status $status
-
-    if test $VIRTUAL_ENV
-        set_color cyan
-        printf "(%s) " (basename $VIRTUAL_ENV)
-        set_color normal
-    end
 
     set_color yellow
     printf '%s' (whoami)
@@ -49,6 +45,10 @@ function fish_prompt --description 'Write out the prompt'
 
     if not test $last_status -eq 0
         set_color $fish_color_error
+    end
+
+    if set -q VIRTUAL_ENV
+        echo -n -s (set_color cyan) "(" (basename "$VIRTUAL_ENV") ")" (set_color normal) " "
     end
 
     printf '↪ '
