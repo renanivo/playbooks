@@ -1,4 +1,7 @@
-hosts: workstation
+hosts: all
 tasks:
 - name: be sure dashlane app is installed
-  homebrew_cask: name=dashlane state=present
+  homebrew_cask: name={{ item }} state=present
+  with_items:
+    - dashlane
+    - spotify
