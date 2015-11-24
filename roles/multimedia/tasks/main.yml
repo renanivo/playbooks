@@ -1,2 +1,2 @@
-- name: be sure spotify is installed
-  homebrew_cask: name=spotify state=present
+- name: be sure vlc is installed
+  homebrew_cask: name=vlc state=present
