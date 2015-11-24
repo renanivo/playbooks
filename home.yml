@@ -1,4 +1,4 @@
 - hosts: home
   roles:
-    - osx-common
-    - multimedia
+    - { role: osx-common, tags: "osx-common" }
+    - { role: multimedia, tags: "multimedia" }
