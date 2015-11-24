@@ -1,13 +1,13 @@
 - hosts: workstation
   roles:
-    - osx-common
-    - git
-    - php-dev
-    - ruby-dev
-    - python-dev
-    - java-dev
-    - node-dev
-    - dev-tools
-    - fonts
-    - macvim
-    - fish
+    - { role: osx-common, tags: "osx-common" }
+    - { role: git, tags: "git" }
+    - { role: php-dev, tags: "php-dev" }
+    - { role: ruby-dev, tags: "ruby-dev" }
+    - { role: python-dev, tags: "python-dev" }
+    - { role: java-dev, tags: "java-dev" }
+    - { role: node-dev, tags: "node-dev" }
+    - { role: dev-tools, tags: "dev-tools" }
+    - { role: fonts, tags: "fonts" }
+    - { role: macvim, tags: "macvim" }
+    - { role: fish, tags: "fish" }
