@@ -17,6 +17,7 @@
 
 - name: install InstantRst pip package
   pip: name=https://github.com/Rykka/instant-rst.py/archive/master.zip
+       extra_args="--user"
        state=latest
 
 - name: be sure vim configurations are updated

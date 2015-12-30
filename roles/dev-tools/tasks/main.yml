@@ -13,7 +13,7 @@
   with_items: brew_packages
 
 - name: be sure pip packages of tools are installed
-  pip: name={{ item }} state=latest
+  pip: name={{ item }} extra_args="--user" state=latest
   with_items: pip_packages
 
 - name: install tools using ruby gems
