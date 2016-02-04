@@ -5,7 +5,7 @@ branches:
     only:
         - master
 
-script: ansible-playbook workstation.yml -vvvv
+script: ansible-playbook workstation.yml -vv
 
 before_script:
     - sudo pip install ansible
