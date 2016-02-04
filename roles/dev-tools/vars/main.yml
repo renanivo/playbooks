@@ -10,8 +10,6 @@ brew_packages:
 brew_cask_packages:
     - iterm2
     - xquartz
-    - vagrant
-    - virtualbox
 
 pip_packages:
     - httpie
