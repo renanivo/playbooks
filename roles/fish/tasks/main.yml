@@ -20,11 +20,11 @@
 
 - name: be sure fish is in /etc/shells
   shell: echo "/usr/local/bin/fish" >> /etc/shells
-  sudo: yes
+  become: yes
   when: "'fish' not in shells.stdout"
 
 - name: be sure fish is the default shell
   shell: chsh -s /usr/local/bin/fish {{ ansible_user_id }}
-  sudo: yes
+  become: yes
   register: output
   changed_when: "'no changes made' not in output.stderr"

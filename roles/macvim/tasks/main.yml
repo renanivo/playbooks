@@ -9,11 +9,11 @@
 
 - name: install redcarpet gem
   gem: name=redcarpet state=latest
-  sudo: yes
+  become: yes
 
 - name: install pygments.rb gem
   gem: name=pygments.rb state=latest
-  sudo: yes
+  become: yes
 
 - name: install InstantRst pip package
   pip: name=https://github.com/Rykka/instant-rst.py/archive/master.zip
