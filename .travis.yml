@@ -6,6 +6,7 @@ branches:
         - master
 
 install:
+    - pip install setuptools
     - pip install ansible
 
 before_script:
