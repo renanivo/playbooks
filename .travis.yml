@@ -5,9 +5,6 @@ branches:
     only:
         - master
 
-python:
-    - "2.7"
-
 install:
     - pip install ansible
 
