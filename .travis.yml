@@ -6,8 +6,7 @@ branches:
         - master
 
 install:
-    - pip install setuptools
-    - pip install ansible
+    - sudo pip install ansible
 
 before_script:
     - rm -rf ~/.vim
