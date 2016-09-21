@@ -6,4 +6,4 @@
 
 - name: be sure global pip packages are installed
   pip: name={{ item }} extra_args="--user" state=latest
-  with_items: global_pip_packages
+  with_items: '{{ global_pip_packages }}'

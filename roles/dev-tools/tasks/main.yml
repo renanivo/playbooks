@@ -10,23 +10,23 @@
 
 - name: be sure homebrew packages of tools are installed
   homebrew: name={{ item }} state=latest
-  with_items: brew_packages
+  with_items: '{{ brew_packages }}'
 
 - name: be sure pip packages of tools are installed
   pip: name={{ item }} extra_args="--user" state=latest
-  with_items: pip_packages
+  with_items: '{{ pip_packages }}'
 
 - name: install tools using ruby gems
   gem: name={{ item }} state=latest
-  with_items: gem_packages
+  with_items: '{{ gem_packages }}'
 
 - name: be sure homebrew cask packages of all tools are installed
   homebrew_cask: name={{ item }} state=present
-  with_items: brew_cask_packages
+  with_items: '{{ brew_cask_packages }}'
 
 - name: be sure all browsers are installed
   homebrew_cask: name={{ item }} state=present
-  with_items: browsers
+  with_items: '{{ browsers }}'
 
 - name: be sure "with" tool is installed
   pip: name=with executable=pip3 state=latest
