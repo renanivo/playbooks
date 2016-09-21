@@ -2,8 +2,6 @@
   roles:
     - { role: osx-common, tags: "osx-common" }
     - { role: git, tags: "git" }
-    - { role: php-dev, tags: "php-dev" }
-    - { role: ruby-dev, tags: "ruby-dev" }
     - { role: python-dev, tags: "python-dev" }
     - { role: java-dev, tags: "java-dev" }
     - { role: node-dev, tags: "node-dev" }
