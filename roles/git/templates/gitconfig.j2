@@ -21,3 +21,8 @@
 [user]
 	name = {{ git_name }}
 	email = {{ git_email }}
+[alias]
+	fix = commit --fixup
+	autosquash = rebase -i --autosquash
+	lg = log --oneline --decorate --graph
+	sync = !git fetch origin && git rebase origin/master
