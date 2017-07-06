@@ -1,6 +1,5 @@
 brew_packages:
     - ack
-    - boot2docker
     - gnu-sed
     - hub
     - nmap
@@ -11,12 +10,8 @@ brew_cask_packages:
     - iterm2
     - xquartz
 
-pip_packages:
-    - httpie
-
 gem_packages:
     - travis
 
 browsers:
     - google-chrome
-    - firefox
