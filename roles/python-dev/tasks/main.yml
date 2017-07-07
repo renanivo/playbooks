@@ -1,8 +1,11 @@
-- name: be sure python2 is installed
+- name: be sure python2 is installed and updated
   homebrew: name=python state=latest
 
-- name: be sure python3 is installed
+- name: be sure python3 is installed and updated
   homebrew: name=python3 state=latest
+
+- name: be sure pyenv is installed and updated
+  homebrew: name=pyenv state=latest
 
 - name: be sure global pip packages are installed
   pip: name={{ item }} extra_args="--user" state=latest
