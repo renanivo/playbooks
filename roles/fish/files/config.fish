@@ -56,7 +56,7 @@ function fish_prompt --description 'Write out the prompt'
     set_color normal
 end
 
-set PATH ~/bin ~/Library/Python/2.7/bin/ ~/.composer/vendor/bin /usr/local/bin /usr/bin /bin /usr/sbin /sbin /usr/local/sbin /opt/X11/bin
+set PATH ~/bin ~/Library/Python/2.7/bin/ /usr/local/bin /usr/bin /bin /usr/sbin /sbin /usr/local/sbin
 set -xg JAVA_HOME (/usr/libexec/java_home)
 set -xg PYTHONPATH "/usr/local/ansible/lib:/usr/local/ansible"
 set -xg VIRTUAL_ENV_DISABLE_PROMPT 0
