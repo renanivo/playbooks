@@ -26,3 +26,4 @@
 	autosquash = rebase -i --autosquash
 	lg = log --oneline --decorate --graph
 	sync = !git fetch origin && git rebase origin/master
+	send = !git push -u origin `git rev-parse --abbrev-ref HEAD`
