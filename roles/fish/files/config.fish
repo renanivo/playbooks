@@ -31,11 +31,7 @@ function fish_prompt --description 'Write out the prompt'
     set_color yellow
     printf '%s' (whoami)
     set_color normal
-    printf ' at '
 
-    set_color magenta
-    printf '%s' (hostname|cut -d . -f 1)
-    set_color normal
     printf ' in '
 
     set_color $fish_color_cwd
