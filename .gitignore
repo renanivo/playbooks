@@ -1,4 +1,5 @@
 *.sw[op]
 .DS_Store
+workstation.retry
 group_vars/*
 !group_vars/*.example
