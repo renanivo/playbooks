@@ -5,6 +5,7 @@ brew_packages:
     - nmap
     - tree
     - wget
+    - editorconfig
 
 brew_cask_packages:
     - iterm2
