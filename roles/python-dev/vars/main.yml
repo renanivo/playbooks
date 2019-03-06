@@ -1,3 +1,10 @@
 global_pip_packages:
     - flake8
     - ipython
+
+python_versions:
+    - 3.7.2
+    - 2.7.15
+
+
+global_python_version: 3.7.2

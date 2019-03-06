@@ -1,12 +1,15 @@
-- name: be sure python2 is installed and updated
-  homebrew: name=python state=latest
-
-- name: be sure python3 is installed and updated
-  homebrew: name=python3 state=latest
-
 - name: be sure pyenv is installed and updated
   homebrew: name=pyenv state=latest
 
-- name: be sure global pip packages are installed
-  pip: name={{ item }} extra_args="--user" state=latest
-  with_items: '{{ global_pip_packages }}'
+- name: install python compiling dependencies
+  homebrew: name={{item}} state=latest
+  with_items:
+    - readline
+    - xz
+
+- name: install pythons with pyenv
+  shell: 'pyenv install {{ item }}'
+  with_items: '{{ python_versions }}'
+
+- name: set global version of python
+  shell: 'pyenv global {{ global_python_version }}'

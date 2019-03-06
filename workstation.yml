@@ -7,3 +7,4 @@
     - { role: fonts, tags: "fonts" }
     - { role: macvim, tags: "macvim" }
     - { role: fish, tags: "fish" }
+    - { role: python-dev, tags: "python-dev" }
