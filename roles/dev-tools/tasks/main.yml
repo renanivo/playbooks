@@ -19,6 +19,3 @@
 - name: be sure homebrew cask packages of all tools are installed
   homebrew_cask: name={{ item }} state=present
   with_items: '{{ brew_cask_packages }}'
-
-- name: be sure "with" tool is installed
-  pip: name=with executable=pip3 state=latest
