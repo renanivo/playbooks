@@ -60,3 +60,4 @@ set -xg PYTHONPATH "/usr/local/ansible/lib:/usr/local/ansible"
 set -xg VIRTUAL_ENV_DISABLE_PROMPT 0
 set -xg LC_ALL en_US.UTF-8
 set -xg LANG en_US.UTF-8
+set -xg CFLAGS "-I"(xcrun --show-sdk-path)"/usr/include"
