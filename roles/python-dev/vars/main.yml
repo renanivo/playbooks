@@ -7,4 +7,4 @@ python_versions:
     - 2.7.15
 
 
-global_python_version: 3.7.2
+global_python_version: "3.7.2 2.7.15"
