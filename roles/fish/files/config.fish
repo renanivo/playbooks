@@ -54,7 +54,7 @@ end
 
 alias g hub
 
-set PATH ~/bin ~/Library/Python/2.7/bin/ /usr/local/bin /usr/bin /bin /usr/sbin /sbin /usr/local/sbin
+set PATH ~/bin ~/.local/bin /usr/local/bin /usr/bin /bin /usr/sbin /sbin /usr/local/sbin
 set -xg JAVA_HOME (/usr/libexec/java_home)
 set -xg PYTHONPATH "/usr/local/ansible/lib:/usr/local/ansible"
 set -xg VIRTUAL_ENV_DISABLE_PROMPT 0
