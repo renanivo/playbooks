@@ -1,6 +1,6 @@
-global_pip_packages:
-    - flake8
+user_pip_packages:
     - ipython
+    - black
 
 python_versions:
     - 3.7.2

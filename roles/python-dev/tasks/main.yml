@@ -13,3 +13,6 @@
 
 - name: set global version of python
   shell: 'pyenv global {{ global_python_version }}'
+
+- name: install user pip packages
+  pip: name={{ user_pip_packages }} state=latest executable='pip3' extra_args='--user'
