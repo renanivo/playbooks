@@ -1,5 +1,5 @@
 - name: be sure MacVim is installed and updated
-  homebrew: name=macvim state=latest options=with-lua,with-override-system-vim
+  homebrew: name=macvim state=latest
 
 - name: be sure exuberant-ctags is installed and updated
   homebrew: name=ctags state=latest
