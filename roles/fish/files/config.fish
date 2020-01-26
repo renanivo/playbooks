@@ -56,6 +56,7 @@ alias g hub
 set PATH ~/bin ~/.local/bin /usr/local/bin /usr/bin /bin /usr/sbin /sbin /usr/local/sbin
 set -xg JAVA_HOME (/usr/libexec/java_home)
 set -xg PYTHONPATH "/usr/local/ansible/lib:/usr/local/ansible"
+set -xg PIP_REQUIRE_VIRTUALENV true
 set -xg VIRTUAL_ENV_DISABLE_PROMPT 0
 set -xg LC_ALL en_US.UTF-8
 set -xg LANG en_US.UTF-8
