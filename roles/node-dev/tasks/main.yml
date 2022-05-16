@@ -1,7 +1,0 @@
-- name: be sure node is installed and up to date
-  homebrew: name=node state=latest
-  ignore_errors: True
-
-- name: be sure npm is installed and up to date
-  homebrew: name=npm state=latest
-  ignore_errors: True

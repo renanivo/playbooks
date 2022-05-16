@@ -1,7 +1,6 @@
 - hosts: workstation
   roles:
     - { role: git, tags: "git" }
-    - { role: node-dev, tags: "node-dev" }
     - { role: dev-tools, tags: "dev-tools" }
     - { role: fonts, tags: "fonts" }
     - { role: macvim, tags: "macvim" }
