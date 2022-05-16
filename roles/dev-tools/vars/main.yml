@@ -11,8 +11,5 @@ brew_cask_packages:
     - iterm2
     - xquartz
 
-gem_packages:
-    - travis
-
 browsers:
     - google-chrome

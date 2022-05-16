@@ -12,10 +12,6 @@
   homebrew: name={{ item }} state=latest
   with_items: '{{ brew_packages }}'
 
-- name: install tools using ruby gems
-  gem: name={{ item }} state=latest
-  with_items: '{{ gem_packages }}'
-
 - name: be sure homebrew cask packages of all tools are installed
   homebrew_cask: name={{ item }} state=present
   with_items: '{{ brew_cask_packages }}'
