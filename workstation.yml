@@ -1,6 +1,5 @@
 - hosts: workstation
   roles:
-    - { role: osx-common, tags: "osx-common" }
     - { role: git, tags: "git" }
     - { role: node-dev, tags: "node-dev" }
     - { role: dev-tools, tags: "dev-tools" }
