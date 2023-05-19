@@ -12,6 +12,5 @@ brew_packages:
 brew_cask_packages:
     - iterm2
     - xquartz
-
-browsers:
     - google-chrome
+    - google-drive
