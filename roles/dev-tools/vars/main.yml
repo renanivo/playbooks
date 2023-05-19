@@ -6,6 +6,8 @@ brew_packages:
     - tree
     - wget
     - editorconfig
+    - progress
+    - bat
 
 brew_cask_packages:
     - iterm2
