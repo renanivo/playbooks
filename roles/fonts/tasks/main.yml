@@ -9,3 +9,6 @@
 - name: copy awesome fonts to user fonts directory
   copy: src=/tmp/awesome-terminal-fonts/patched/
    dest=/Users/{{ ansible_user_id }}/Library/Fonts
+
+- name: be sure fira code nerd font is installed
+  homebrew: name=font-fira-code-nerd-font state=latest
